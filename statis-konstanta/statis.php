@@ -1,12 +1,17 @@
 <?php
 
+// use Motor as GlobalMotor;
+
 class Motor{
 
     static $roda = 2;
     static $warna = "merah";
 
+    public $cc = 1000;
+
     static function jalan() {
-        echo "Motor berjalan ke arah selatan" . PHP_EOL;
+        echo "Motor berjalan ke arah selatan dengan cc "; 
+        echo (new Motor())->cc . PHP_EOL;
     }
 
     //cara memanggil properti static di dalam function
